@@ -1,0 +1,10 @@
+C:\Users\Dimitri\Documents\VilaPinheiro\Domain\bin\Debug\netcoreapp3.0\Domain.deps.json
+C:\Users\Dimitri\Documents\VilaPinheiro\Domain\bin\Debug\netcoreapp3.0\Domain.runtimeconfig.json
+C:\Users\Dimitri\Documents\VilaPinheiro\Domain\bin\Debug\netcoreapp3.0\Domain.runtimeconfig.dev.json
+C:\Users\Dimitri\Documents\VilaPinheiro\Domain\bin\Debug\netcoreapp3.0\Domain.dll
+C:\Users\Dimitri\Documents\VilaPinheiro\Domain\bin\Debug\netcoreapp3.0\Domain.pdb
+C:\Users\Dimitri\Documents\VilaPinheiro\Domain\obj\Debug\netcoreapp3.0\Domain.csprojAssemblyReference.cache
+C:\Users\Dimitri\Documents\VilaPinheiro\Domain\obj\Debug\netcoreapp3.0\Domain.AssemblyInfoInputs.cache
+C:\Users\Dimitri\Documents\VilaPinheiro\Domain\obj\Debug\netcoreapp3.0\Domain.AssemblyInfo.cs
+C:\Users\Dimitri\Documents\VilaPinheiro\Domain\obj\Debug\netcoreapp3.0\Domain.dll
+C:\Users\Dimitri\Documents\VilaPinheiro\Domain\obj\Debug\netcoreapp3.0\Domain.pdb

@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Domain.Context;
 using VilaPinheiro.Services.Concrete;
+using VilaPinheiro.Services.Abstract;
 
 namespace VilaPinheiro.Controllers
 {
@@ -13,17 +14,36 @@ namespace VilaPinheiro.Controllers
     [ApiController]
     public class PersonController : ControllerBase    
     {
+        private IPersonService personService;
         public PersonController()
-        {          
+        {
+            personService = new PersonService();
         }
 
         [HttpGet("{cpf}")]        
         public ActionResult ObterPessoa(string cpf)
         {
-            var personService = new PersonService();
-
+            if (cpf == null)
+                return BadRequest();
+                       
             var person = personService.ObterPessoa(cpf);
+
+            if (person == null)
+                return NoContent();
+            
             return Ok(person);
+        }
+
+
+        [HttpGet("Birthdays")]
+        public ActionResult GetNextBirthdays()
+        {
+            var birthdays = personService.ObterProximosAniversarios(15);
+
+            if (!birthdays.Any())
+                return NoContent();
+
+            return Ok(birthdays);
         }
     }
 }

@@ -23,6 +23,11 @@ namespace Domain.Repositories.Concrete
             _context = context;
         }
 
+        public IQueryable<Person> ObterPessoas()
+        {
+            return _context.Person;
+        }
+
         public Person ObterPessoa(string cpf)
         {
             return _context.Person.Where(i => i.Cpf ==cpf).FirstOrDefault();

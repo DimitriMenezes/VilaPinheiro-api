@@ -6,7 +6,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using VilaPinheiro.Models;
 using VilaPinheiro.Services.Abstract;
+using System.Data.Entity;
 
 namespace VilaPinheiro.Services.Concrete
 {
@@ -21,14 +23,29 @@ namespace VilaPinheiro.Services.Concrete
             _personRepository = new PersonRepository();
         }        
        
-        public Person ObterPessoa(string cpf)
+        public DTOPerson ObterPessoa(string cpf)
         {
-            return _personRepository.ObterPessoa(cpf);
+            var person = _personRepository.ObterPessoa(cpf);
+
+            var dto = new DTOPerson
+            {
+                Birthday = person.Birthday,
+                Cpf = person.Cpf,
+                Id = person.Id,
+                Name = person.Name,
+                Nickname = person.Nickname
+            };
+
+            //AutoMapper.Mapper.CreateMap<Person,DTOPerson>(person);
+            
+            return dto;
         }
 
-        public void ObterProximosAniversarios()
-        {
-            throw new NotImplementedException();
+        public IQueryable<Person> ObterProximosAniversarios(int qtdDays)
+        {           
+            return  _personRepository.ObterPessoas().
+                Where(u => u.Birthday.Value.AddYears(DateTime.Now.Year - u.Birthday.Value.Year) >= DateTime.Now.Date 
+                && u.Birthday.Value.AddYears(DateTime.Now.Year - u.Birthday.Value.Year) <= DateTime.Now.Date.AddDays(qtdDays));            
         }
     }
 }

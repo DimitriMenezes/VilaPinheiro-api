@@ -3,12 +3,13 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using VilaPinheiro.Models;
 
 namespace VilaPinheiro.Services.Abstract
 {
     public interface IPersonService
     {
-        Person ObterPessoa(string cpf);
-        void ObterProximosAniversarios();
+        DTOPerson ObterPessoa(string cpf);
+        IQueryable<Person> ObterProximosAniversarios(int qtdDays);
     }
 }
