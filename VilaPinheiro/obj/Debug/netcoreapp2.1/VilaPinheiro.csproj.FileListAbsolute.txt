@@ -1,0 +1,17 @@
+C:\Users\Dimitri\Desktop\GIT\VilaPinheiro\VilaPinheiro\bin\Debug\netcoreapp2.1\VilaPinheiro.deps.json
+C:\Users\Dimitri\Desktop\GIT\VilaPinheiro\VilaPinheiro\bin\Debug\netcoreapp2.1\VilaPinheiro.runtimeconfig.json
+C:\Users\Dimitri\Desktop\GIT\VilaPinheiro\VilaPinheiro\bin\Debug\netcoreapp2.1\VilaPinheiro.runtimeconfig.dev.json
+C:\Users\Dimitri\Desktop\GIT\VilaPinheiro\VilaPinheiro\bin\Debug\netcoreapp2.1\VilaPinheiro.dll
+C:\Users\Dimitri\Desktop\GIT\VilaPinheiro\VilaPinheiro\bin\Debug\netcoreapp2.1\VilaPinheiro.pdb
+C:\Users\Dimitri\Desktop\GIT\VilaPinheiro\VilaPinheiro\obj\Debug\netcoreapp2.1\VilaPinheiro.csprojAssemblyReference.cache
+C:\Users\Dimitri\Desktop\GIT\VilaPinheiro\VilaPinheiro\obj\Debug\netcoreapp2.1\VilaPinheiro.csproj.CoreCompileInputs.cache
+C:\Users\Dimitri\Desktop\GIT\VilaPinheiro\VilaPinheiro\obj\Debug\netcoreapp2.1\VilaPinheiro.RazorAssemblyInfo.cache
+C:\Users\Dimitri\Desktop\GIT\VilaPinheiro\VilaPinheiro\obj\Debug\netcoreapp2.1\VilaPinheiro.RazorAssemblyInfo.cs
+C:\Users\Dimitri\Desktop\GIT\VilaPinheiro\VilaPinheiro\obj\Debug\netcoreapp2.1\VilaPinheiro.AssemblyInfoInputs.cache
+C:\Users\Dimitri\Desktop\GIT\VilaPinheiro\VilaPinheiro\obj\Debug\netcoreapp2.1\VilaPinheiro.AssemblyInfo.cs
+C:\Users\Dimitri\Desktop\GIT\VilaPinheiro\VilaPinheiro\obj\Debug\netcoreapp2.1\VilaPinheiro.RazorTargetAssemblyInfo.cache
+C:\Users\Dimitri\Desktop\GIT\VilaPinheiro\VilaPinheiro\obj\Debug\netcoreapp2.1\VilaPinheiro.dll
+C:\Users\Dimitri\Desktop\GIT\VilaPinheiro\VilaPinheiro\obj\Debug\netcoreapp2.1\VilaPinheiro.pdb
+C:\Users\Dimitri\Desktop\GIT\VilaPinheiro\VilaPinheiro\bin\Debug\netcoreapp2.1\Domain.dll
+C:\Users\Dimitri\Desktop\GIT\VilaPinheiro\VilaPinheiro\bin\Debug\netcoreapp2.1\Domain.pdb
+C:\Users\Dimitri\Desktop\GIT\VilaPinheiro\VilaPinheiro\obj\Debug\netcoreapp2.1\VilaPinheiro.csproj.CopyComplete
