@@ -21,7 +21,7 @@ namespace VilaPinheiro.Controllers
         }
 
         [HttpGet("{cpf}")]        
-        public ActionResult ObterPessoa(string cpf)
+        public ActionResult GetPerson(string cpf)
         {
             if (cpf == null)
                 return BadRequest();

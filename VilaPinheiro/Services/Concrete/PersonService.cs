@@ -14,9 +14,7 @@ namespace VilaPinheiro.Services.Concrete
 {
     public class PersonService : IPersonService
     {
-        private ModelContext _context;
-        private IPersonRepository _personRepository;
-        
+        private IPersonRepository _personRepository;        
         
         public PersonService()
         {            
@@ -27,6 +25,9 @@ namespace VilaPinheiro.Services.Concrete
         {
             var person = _personRepository.ObterPessoa(cpf);
 
+            if (person == null)
+                return null;
+
             var dto = new DTOPerson
             {
                 Birthday = person.Birthday,
@@ -36,16 +37,31 @@ namespace VilaPinheiro.Services.Concrete
                 Nickname = person.Nickname
             };
 
-            //AutoMapper.Mapper.CreateMap<Person,DTOPerson>(person);
+            //Mapper.Map<Person,DTOPerson>(person, dto);
             
             return dto;
         }
 
-        public IQueryable<Person> ObterProximosAniversarios(int qtdDays)
+        public IList<DTONextBirthday> ObterProximosAniversarios(int qtdDays)
         {           
-            return  _personRepository.ObterPessoas().
+            var query =  _personRepository.ObterPessoas().
                 Where(u => u.Birthday.Value.AddYears(DateTime.Now.Year - u.Birthday.Value.Year) >= DateTime.Now.Date 
-                && u.Birthday.Value.AddYears(DateTime.Now.Year - u.Birthday.Value.Year) <= DateTime.Now.Date.AddDays(qtdDays));            
+                && u.Birthday.Value.AddYears(DateTime.Now.Year - u.Birthday.Value.Year) <= DateTime.Now.Date.AddDays(qtdDays));
+
+            var result = new List<DTONextBirthday>();
+
+            foreach(var person in query)
+            {
+                result.Add(new DTONextBirthday
+                {
+                    Birthday = person.Birthday.Value,
+                    PersonId = person.Id,
+                    PersonName = person.Name,
+                    PersonNickName = person.Nickname
+                }) ;
+            }
+
+            return result;
         }
     }
 }

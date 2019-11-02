@@ -5,11 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-  </ItemGroup>
-  
-    <ItemGroup>
-    <PackageReference Include="AutoMapper" Version="9.0.0" />
     <PackageReference Include="EntityFramework" Version="6.3.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.0.0-rc2" />
   </ItemGroup>
 
   <ItemGroup>

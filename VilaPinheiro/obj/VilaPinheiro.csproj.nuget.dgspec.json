@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Dimitri\\Desktop\\GIT\\VilaPinheiro-api\\VilaPinheiro\\VilaPinheiro.csproj": {}
+    "C:\\Users\\Dimitri\\Desktop\\GIT\\VilaPinheiro\\VilaPinheiro\\VilaPinheiro.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Dimitri\\Desktop\\GIT\\VilaPinheiro-api\\Domain\\Domain.csproj": {
+    "C:\\Users\\Dimitri\\Desktop\\GIT\\VilaPinheiro\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Dimitri\\Desktop\\GIT\\VilaPinheiro-api\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Dimitri\\Desktop\\GIT\\VilaPinheiro\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\Dimitri\\Desktop\\GIT\\VilaPinheiro-api\\Domain\\Domain.csproj",
+        "projectPath": "C:\\Users\\Dimitri\\Desktop\\GIT\\VilaPinheiro\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\Dimitri\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Dimitri\\Desktop\\GIT\\VilaPinheiro-api\\Domain\\obj\\",
+        "outputPath": "C:\\Users\\Dimitri\\Desktop\\GIT\\VilaPinheiro\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -75,14 +75,14 @@
         }
       }
     },
-    "C:\\Users\\Dimitri\\Desktop\\GIT\\VilaPinheiro-api\\VilaPinheiro\\VilaPinheiro.csproj": {
+    "C:\\Users\\Dimitri\\Desktop\\GIT\\VilaPinheiro\\VilaPinheiro\\VilaPinheiro.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Dimitri\\Desktop\\GIT\\VilaPinheiro-api\\VilaPinheiro\\VilaPinheiro.csproj",
+        "projectUniqueName": "C:\\Users\\Dimitri\\Desktop\\GIT\\VilaPinheiro\\VilaPinheiro\\VilaPinheiro.csproj",
         "projectName": "VilaPinheiro",
-        "projectPath": "C:\\Users\\Dimitri\\Desktop\\GIT\\VilaPinheiro-api\\VilaPinheiro\\VilaPinheiro.csproj",
+        "projectPath": "C:\\Users\\Dimitri\\Desktop\\GIT\\VilaPinheiro\\VilaPinheiro\\VilaPinheiro.csproj",
         "packagesPath": "C:\\Users\\Dimitri\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Dimitri\\Desktop\\GIT\\VilaPinheiro-api\\VilaPinheiro\\obj\\",
+        "outputPath": "C:\\Users\\Dimitri\\Desktop\\GIT\\VilaPinheiro\\VilaPinheiro\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -101,8 +101,8 @@
         "frameworks": {
           "netcoreapp3.0": {
             "projectReferences": {
-              "C:\\Users\\Dimitri\\Desktop\\GIT\\VilaPinheiro-api\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\Dimitri\\Desktop\\GIT\\VilaPinheiro-api\\Domain\\Domain.csproj"
+              "C:\\Users\\Dimitri\\Desktop\\GIT\\VilaPinheiro\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\Dimitri\\Desktop\\GIT\\VilaPinheiro\\Domain\\Domain.csproj"
               }
             }
           }
@@ -116,13 +116,13 @@
       "frameworks": {
         "netcoreapp3.0": {
           "dependencies": {
-            "AutoMapper": {
-              "target": "Package",
-              "version": "[9.0.0, )"
-            },
             "EntityFramework": {
               "target": "Package",
               "version": "[6.3.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.0.0-rc2, )"
             }
           },
           "imports": [

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Dimitri\\Desktop\\GIT\\VilaPinheiro-api\\Domain\\Domain.csproj": {}
+    "C:\\Users\\Dimitri\\Desktop\\GIT\\VilaPinheiro\\Domain\\Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Dimitri\\Desktop\\GIT\\VilaPinheiro-api\\Domain\\Domain.csproj": {
+    "C:\\Users\\Dimitri\\Desktop\\GIT\\VilaPinheiro\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Dimitri\\Desktop\\GIT\\VilaPinheiro-api\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Dimitri\\Desktop\\GIT\\VilaPinheiro\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\Dimitri\\Desktop\\GIT\\VilaPinheiro-api\\Domain\\Domain.csproj",
+        "projectPath": "C:\\Users\\Dimitri\\Desktop\\GIT\\VilaPinheiro\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\Dimitri\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Dimitri\\Desktop\\GIT\\VilaPinheiro-api\\Domain\\obj\\",
+        "outputPath": "C:\\Users\\Dimitri\\Desktop\\GIT\\VilaPinheiro\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

@@ -10,6 +10,6 @@ namespace VilaPinheiro.Services.Abstract
     public interface IPersonService
     {
         DTOPerson ObterPessoa(string cpf);
-        IQueryable<Person> ObterProximosAniversarios(int qtdDays);
+        IList<DTONextBirthday> ObterProximosAniversarios(int qtdDays);
     }
 }
