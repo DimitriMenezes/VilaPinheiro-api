@@ -11,5 +11,6 @@ namespace VilaPinheiro.Services.Abstract
     {
         DTOPerson ObterPessoa(string cpf);
         IList<DTONextBirthday> ObterProximosAniversarios(int qtdDays);
+        void CreatePerson(DTOPerson dto);
     }
 }

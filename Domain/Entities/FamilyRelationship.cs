@@ -13,6 +13,6 @@ namespace Domain.Entities
         public int Id { get; set; }
         public string Description { get; set; }
 
-        public ICollection<Family> Family { get; set; }
+        public virtual ICollection<Family> Family { get; set; }
     }
 }

@@ -10,8 +10,8 @@ namespace Domain.Entities
         public int PersonId { get; set; }
         public int FamilyRelationshipId { get; set; }
 
-        public FamilyRelationship FamilyRelationship { get; set; }
-        public House House { get; set; }
-        public Person Person { get; set; }
+        public virtual FamilyRelationship FamilyRelationship { get; set; }
+        public virtual House House { get; set; }
+        public virtual Person Person { get; set; }
     }
 }

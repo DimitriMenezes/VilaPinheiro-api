@@ -11,6 +11,7 @@ namespace VilaPinheiro.Models
         public string Name { get; set; }
         public string Nickname { get; set; }
         public string Cpf { get; set; }
-        public DateTime? Birthday { get; set; }
+        public DateTime DateOfBirth { get; set; }
+        public DTOContact Contact { get; set; }
     }
 }

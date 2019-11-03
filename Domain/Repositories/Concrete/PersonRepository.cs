@@ -9,28 +9,11 @@ using Domain.Repositories.Abstract;
 
 namespace Domain.Repositories.Concrete
 {
-    public class PersonRepository : IPersonRepository
+    public class PersonRepository : BaseRepository<Person> , IPersonRepository
     {
-        private readonly ModelContext _context;
-
-        public PersonRepository()
+        public Person GetByCpf(string cpf)
         {
-            _context = new ModelContext();
-        }
-
-        public PersonRepository(ModelContext context)
-        {
-            _context = context;
-        }
-
-        public IQueryable<Person> ObterPessoas()
-        {
-            return _context.Person;
-        }
-
-        public Person ObterPessoa(string cpf)
-        {
-            return _context.Person.Where(i => i.Cpf ==cpf).FirstOrDefault();
+            return dbSet.Where(i => i.Cpf == cpf).FirstOrDefault();
         }
     }
 }

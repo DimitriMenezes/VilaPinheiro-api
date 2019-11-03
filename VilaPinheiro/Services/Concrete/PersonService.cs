@@ -14,27 +14,33 @@ namespace VilaPinheiro.Services.Concrete
 {
     public class PersonService : IPersonService
     {
-        private IPersonRepository _personRepository;        
+        private IPersonRepository _personRepository;
+        private IContactRepository _contactRepository;
         
         public PersonService()
         {            
             _personRepository = new PersonRepository();
+            _contactRepository = new ContactRepository();
         }        
        
         public DTOPerson ObterPessoa(string cpf)
         {
-            var person = _personRepository.ObterPessoa(cpf);
+            var person = _personRepository.GetByCpf(cpf);
 
             if (person == null)
                 return null;
 
             var dto = new DTOPerson
             {
-                Birthday = person.Birthday,
+                DateOfBirth = person.DateOfBirth,
                 Cpf = person.Cpf,
                 Id = person.Id,
                 Name = person.Name,
-                Nickname = person.Nickname
+                Nickname = person.Nickname,
+                Contact = new DTOContact
+                {
+                    
+                }
             };
 
             //Mapper.Map<Person,DTOPerson>(person, dto);
@@ -44,9 +50,9 @@ namespace VilaPinheiro.Services.Concrete
 
         public IList<DTONextBirthday> ObterProximosAniversarios(int qtdDays)
         {           
-            var query =  _personRepository.ObterPessoas().
-                Where(u => u.Birthday.Value.AddYears(DateTime.Now.Year - u.Birthday.Value.Year) >= DateTime.Now.Date 
-                && u.Birthday.Value.AddYears(DateTime.Now.Year - u.Birthday.Value.Year) <= DateTime.Now.Date.AddDays(qtdDays));
+            var query =  _personRepository.GetAll().
+                Where(u => u.DateOfBirth.AddYears(DateTime.Now.Year - u.DateOfBirth.Year) >= DateTime.Now.Date 
+                && u.DateOfBirth.AddYears(DateTime.Now.Year - u.DateOfBirth.Year) <= DateTime.Now.Date.AddDays(qtdDays));
 
             var result = new List<DTONextBirthday>();
 
@@ -54,14 +60,40 @@ namespace VilaPinheiro.Services.Concrete
             {
                 result.Add(new DTONextBirthday
                 {
-                    Birthday = person.Birthday.Value,
+                    Birthday = person.DateOfBirth,
                     PersonId = person.Id,
                     PersonName = person.Name,
                     PersonNickName = person.Nickname
-                }) ;
+                });
             }
 
             return result;
         }
+
+        public void CreatePerson(DTOPerson dto)
+        {
+            var person = new Person
+            {
+                Cpf = dto.Cpf,
+                DateOfBirth = dto.DateOfBirth,
+                Name = dto.Name,
+                Nickname = dto.Nickname
+            };
+
+            _personRepository.Insert(person);
+
+            if(dto.Contact != null)
+            {
+                var contact = new Contact
+                {
+                    PersonId = person.Id,
+                    Email = dto.Contact.Email,
+                    Cellphone1 = dto.Contact.Cellphone1,
+                    Cellphone2 = dto.Contact.Cellphone2
+                };
+                _contactRepository.Insert(contact);
+            }
+
+        }        
     }
 }

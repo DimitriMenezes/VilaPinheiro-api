@@ -31,34 +31,18 @@ namespace VilaPinheiro
                 c.EnableEndpointRouting = false;
             });
             
-//            services.AddMvcCore(c =>
-//            {
-//                c.EnableEndpointRouting = false;
-//​
-//                foreach (var formatter in c.OutputFormatters
-//                        .OfType<ODataOutputFormatter>()
-//                        .Where(it => !it.SupportedMediaTypes.Any()))
-//                {
-//                    formatter.SupportedMediaTypes.Add(
-//                        new MediaTypeHeaderValue("application/prs.mock-odata"));
-//                }
-//                foreach (var formatter in c.InputFormatters
-//                        .OfType<ODataInputFormatter>()
-//                        .Where(it => !it.SupportedMediaTypes.Any()))
-//                {
-//                    formatter.SupportedMediaTypes.Add(
-//                        new MediaTypeHeaderValue("application/prs.mock-odata"));
-//                }
-//            }
-
-
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo
                 {
                     Version = "v1",
-                    Title = "a",
-                    Description = "b"
+                    Title = "Vila Pinheiro API",
+                    Description = "APIs para o aplicativo de informativos da Vila Pinheiro",
+                    Contact = new Microsoft.OpenApi.Models.OpenApiContact
+                    {
+                        Name = "Dimitri Carvalho Menezes",
+                        Email = "dimitri.menezes@gmail.com"                        
+                    }
                 });
 
             });
@@ -83,7 +67,7 @@ namespace VilaPinheiro
             app.UseSwagger();
             app.UseSwaggerUI( c => 
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");            
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Vila Pinheiro API");            
             });
 
             app.UseEndpoints(endpoints =>

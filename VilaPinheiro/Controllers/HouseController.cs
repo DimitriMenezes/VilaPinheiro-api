@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using VilaPinheiro.Models;
 
 namespace VilaPinheiro.Controllers
 {
@@ -24,7 +25,7 @@ namespace VilaPinheiro.Controllers
         }
 
         [HttpPost()]
-        public ActionResult CreateHouse()
+        public ActionResult CreateHouse(DTOHouse dto)
         {
             return Ok();
         }

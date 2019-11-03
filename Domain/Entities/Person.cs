@@ -8,6 +8,7 @@ namespace Domain.Entities
         public Person()
         {
             Contact = new HashSet<Contact>();
+            EventInvitation = new HashSet<EventInvitation>();
             Family = new HashSet<Family>();
         }
 
@@ -15,9 +16,10 @@ namespace Domain.Entities
         public string Name { get; set; }
         public string Nickname { get; set; }
         public string Cpf { get; set; }
-        public DateTime? Birthday { get; set; }
+        public DateTime DateOfBirth { get; set; }
 
-        public ICollection<Contact> Contact { get; set; }
-        public ICollection<Family> Family { get; set; }
+        public virtual ICollection<Contact> Contact { get; set; }
+        public virtual ICollection<EventInvitation> EventInvitation { get; set; }
+        public virtual ICollection<Family> Family { get; set; }
     }
 }

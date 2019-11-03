@@ -6,10 +6,13 @@ using Microsoft.AspNetCore.Mvc;
 using Domain.Context;
 using VilaPinheiro.Services.Concrete;
 using VilaPinheiro.Services.Abstract;
+using VilaPinheiro.Models;
 
 namespace VilaPinheiro.Controllers
 {
-
+    /// <summary>
+    /// 
+    /// </summary>
     [Route("api/Pessoa")]
     [ApiController]
     public class PersonController : ControllerBase    
@@ -19,9 +22,13 @@ namespace VilaPinheiro.Controllers
         {
             personService = new PersonService();
         }
-
+        /// <summary>
+        /// Obtém uma pessoa pelo cpf
+        /// </summary>
+        /// <param name="cpf"></param>
+        /// <returns></returns>
         [HttpGet("{cpf}")]        
-        public ActionResult GetPerson(string cpf)
+        public ActionResult GetPersonByCpf(string cpf)
         {
             if (cpf == null)
                 return BadRequest();
@@ -33,8 +40,28 @@ namespace VilaPinheiro.Controllers
             
             return Ok(person);
         }
-
-
+        /// <summary>
+        /// Cadastra uma pessoa e seu contato
+        /// </summary>
+        /// <param name="dto"></param>
+        /// <returns></returns>
+        [HttpPost("")]
+        public ActionResult CreatePerson(DTOPerson dto)
+        {
+            try
+            {
+                personService.CreatePerson(dto);
+                return Ok();
+            }
+            catch(Exception ex)
+            {
+                return BadRequest();
+            }           
+        }
+        /// <summary>
+        /// Obtém os aniversários dos próximos 15 dias
+        /// </summary>
+        /// <returns></returns>
         [HttpGet("Birthdays")]
         public ActionResult GetNextBirthdays()
         {

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Dimitri\\Desktop\\GIT\\VilaPinheiro\\VilaPinheiro\\VilaPinheiro.csproj": {}
+    "C:\\Users\\Dimitri\\Desktop\\GIT\\VilaPinheiro-api\\VilaPinheiro\\VilaPinheiro.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Dimitri\\Desktop\\GIT\\VilaPinheiro\\Domain\\Domain.csproj": {
+    "C:\\Users\\Dimitri\\Desktop\\GIT\\VilaPinheiro-api\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Dimitri\\Desktop\\GIT\\VilaPinheiro\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Dimitri\\Desktop\\GIT\\VilaPinheiro-api\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\Dimitri\\Desktop\\GIT\\VilaPinheiro\\Domain\\Domain.csproj",
+        "projectPath": "C:\\Users\\Dimitri\\Desktop\\GIT\\VilaPinheiro-api\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\Dimitri\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Dimitri\\Desktop\\GIT\\VilaPinheiro\\Domain\\obj\\",
+        "outputPath": "C:\\Users\\Dimitri\\Desktop\\GIT\\VilaPinheiro-api\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -41,7 +41,17 @@
       "frameworks": {
         "netcoreapp3.0": {
           "dependencies": {
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.3.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
               "version": "[3.0.0, )"
             },
@@ -54,6 +64,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[3.0.0, )"
+            },
+            "System.Configuration.ConfigurationManager": {
+              "target": "Package",
+              "version": "[4.6.0, )"
             }
           },
           "imports": [
@@ -75,14 +89,14 @@
         }
       }
     },
-    "C:\\Users\\Dimitri\\Desktop\\GIT\\VilaPinheiro\\VilaPinheiro\\VilaPinheiro.csproj": {
+    "C:\\Users\\Dimitri\\Desktop\\GIT\\VilaPinheiro-api\\VilaPinheiro\\VilaPinheiro.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Dimitri\\Desktop\\GIT\\VilaPinheiro\\VilaPinheiro\\VilaPinheiro.csproj",
+        "projectUniqueName": "C:\\Users\\Dimitri\\Desktop\\GIT\\VilaPinheiro-api\\VilaPinheiro\\VilaPinheiro.csproj",
         "projectName": "VilaPinheiro",
-        "projectPath": "C:\\Users\\Dimitri\\Desktop\\GIT\\VilaPinheiro\\VilaPinheiro\\VilaPinheiro.csproj",
+        "projectPath": "C:\\Users\\Dimitri\\Desktop\\GIT\\VilaPinheiro-api\\VilaPinheiro\\VilaPinheiro.csproj",
         "packagesPath": "C:\\Users\\Dimitri\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Dimitri\\Desktop\\GIT\\VilaPinheiro\\VilaPinheiro\\obj\\",
+        "outputPath": "C:\\Users\\Dimitri\\Desktop\\GIT\\VilaPinheiro-api\\VilaPinheiro\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -101,8 +115,8 @@
         "frameworks": {
           "netcoreapp3.0": {
             "projectReferences": {
-              "C:\\Users\\Dimitri\\Desktop\\GIT\\VilaPinheiro\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\Dimitri\\Desktop\\GIT\\VilaPinheiro\\Domain\\Domain.csproj"
+              "C:\\Users\\Dimitri\\Desktop\\GIT\\VilaPinheiro-api\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\Dimitri\\Desktop\\GIT\\VilaPinheiro-api\\Domain\\Domain.csproj"
               }
             }
           }
@@ -119,6 +133,12 @@
             "EntityFramework": {
               "target": "Package",
               "version": "[6.3.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.0.0, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

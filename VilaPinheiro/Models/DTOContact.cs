@@ -1,16 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
-namespace Domain.Entities
+namespace VilaPinheiro.Models
 {
-    public partial class Contact
+    public class DTOContact
     {
         public int Id { get; set; }
         public int PersonId { get; set; }
         public string Email { get; set; }
         public decimal? Cellphone1 { get; set; }
         public decimal? Cellphone2 { get; set; }
-
-        public virtual Person Person { get; set; }
     }
 }
