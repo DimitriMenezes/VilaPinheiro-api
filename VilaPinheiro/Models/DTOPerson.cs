@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using VilaPinheiro.Util;
 
 namespace VilaPinheiro.Models
 {
@@ -13,5 +14,6 @@ namespace VilaPinheiro.Models
         public string Cpf { get; set; }
         public DateTime DateOfBirth { get; set; }
         public DTOContact Contact { get; set; }
+        public Enumaration.FamilyRelationship FamilyRelationshipId { get; set; }
     }
 }

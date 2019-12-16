@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Domain.Repositories.Abstract;
+using Domain.Repositories.Concrete;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -10,6 +12,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using VilaPinheiro.Services.Abstract;
+using VilaPinheiro.Services.Concrete;
 
 namespace VilaPinheiro
 {
@@ -25,6 +29,18 @@ namespace VilaPinheiro
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            #region Injeção de Dependencia dos Repositories
+            services.AddScoped<IPersonRepository, PersonRepository>();
+            services.AddScoped<IHouseRepository, HouseRepository>();
+            services.AddScoped<IFamilyRepository, FamilyRepository>();
+            services.AddScoped<IContactRepository, ContactRepository>();
+            #endregion
+
+            #region Injeção de Dependencia dos Services
+            services.AddScoped<IHouseService, HouseService>();
+            services.AddScoped<IPersonService, PersonService>();
+            #endregion
+
             services.AddControllers();
             services.AddMvc( c =>
             {

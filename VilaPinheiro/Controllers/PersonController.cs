@@ -13,14 +13,14 @@ namespace VilaPinheiro.Controllers
     /// <summary>
     /// 
     /// </summary>
-    [Route("api/Pessoa")]
+    [Route("api/Person")]
     [ApiController]
     public class PersonController : ControllerBase    
     {
-        private IPersonService personService;
-        public PersonController()
+        private readonly IPersonService personService;
+        public PersonController(IPersonService personService)
         {
-            personService = new PersonService();
+            this.personService = personService;
         }
         /// <summary>
         /// Obtém uma pessoa pelo cpf
@@ -33,7 +33,7 @@ namespace VilaPinheiro.Controllers
             if (cpf == null)
                 return BadRequest();
                        
-            var person = personService.ObterPessoa(cpf);
+            var person = personService.GetPersonByCpf(cpf);
 
             if (person == null)
                 return NoContent();
@@ -65,7 +65,7 @@ namespace VilaPinheiro.Controllers
         [HttpGet("Birthdays")]
         public ActionResult GetNextBirthdays()
         {
-            var birthdays = personService.ObterProximosAniversarios(15);
+            var birthdays = personService.GetNextBirthdays(15);
 
             if (!birthdays.Any())
                 return NoContent();

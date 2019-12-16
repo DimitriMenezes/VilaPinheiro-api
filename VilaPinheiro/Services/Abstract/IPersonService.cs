@@ -9,8 +9,8 @@ namespace VilaPinheiro.Services.Abstract
 {
     public interface IPersonService
     {
-        DTOPerson ObterPessoa(string cpf);
-        IList<DTONextBirthday> ObterProximosAniversarios(int qtdDays);
+        DTOPerson GetPersonByCpf(string cpf);
+        IList<DTONextBirthday> GetNextBirthdays(int qtdDays);
         void CreatePerson(DTOPerson dto);
     }
 }

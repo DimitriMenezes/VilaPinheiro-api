@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using VilaPinheiro.Models;
 using VilaPinheiro.Services.Abstract;
 using System.Data.Entity;
+using VilaPinheiro.Util;
 
 namespace VilaPinheiro.Services.Concrete
 {
@@ -17,13 +18,13 @@ namespace VilaPinheiro.Services.Concrete
         private IPersonRepository _personRepository;
         private IContactRepository _contactRepository;
         
-        public PersonService()
+        public PersonService(IPersonRepository personRepository, IContactRepository contactRepository)
         {            
             _personRepository = new PersonRepository();
             _contactRepository = new ContactRepository();
         }        
        
-        public DTOPerson ObterPessoa(string cpf)
+        public DTOPerson GetPersonByCpf(string cpf)
         {
             var person = _personRepository.GetByCpf(cpf);
 
@@ -48,7 +49,7 @@ namespace VilaPinheiro.Services.Concrete
             return dto;
         }
 
-        public IList<DTONextBirthday> ObterProximosAniversarios(int qtdDays)
+        public IList<DTONextBirthday> GetNextBirthdays(int qtdDays)
         {           
             var query =  _personRepository.GetAll().
                 Where(u => u.DateOfBirth.AddYears(DateTime.Now.Year - u.DateOfBirth.Year) >= DateTime.Now.Date 
@@ -93,7 +94,6 @@ namespace VilaPinheiro.Services.Concrete
                 };
                 _contactRepository.Insert(contact);
             }
-
         }        
     }
 }
