@@ -1,4 +1,4 @@
 # Ignore folders
 .vs
-bin
-obj
+bin/
+obj/
